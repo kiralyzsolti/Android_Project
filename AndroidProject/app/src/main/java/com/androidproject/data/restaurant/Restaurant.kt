@@ -20,5 +20,6 @@ data class Restaurant(
     val price: Int,
     val reserve_url: String,
     val mobile_reserve_url: String,
-    val image_url: String
+    val image_url: String,
+    var favourite: Boolean = false
 )
