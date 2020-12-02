@@ -1,7 +1,7 @@
 package com.androidproject.data.user
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.lifecycle.LiveData
+import androidx.room.*
 
 @Entity(tableName = "users")
 data class User (
