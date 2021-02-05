@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/refreshFragment">
 
     <fragment
         android:id="@+id/detailFragment"
@@ -21,7 +21,8 @@
         android:id="@+id/profileFragment"
         android:name="com.androidproject.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile"
+        app:startDestination="@id/action_profileFragment_to_listFragment">
         <action
             android:id="@+id/action_profileFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -29,11 +30,8 @@
             android:id="@+id/action_profileFragment_to_listFragment"
             app:destination="@id/listFragment" />
         <action
-            android:id="@+id/action_profileFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_profileFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
+            android:id="@+id/action_profileFragment_to_refreshFragment"
+            app:destination="@id/refreshFragment" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
@@ -48,24 +46,18 @@
             app:destination="@id/profileFragment" />
     </fragment>
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.androidproject.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:id="@+id/refreshFragment"
+        android:name="com.androidproject.RefreshFragment"
+        android:label="fragment_refresh"
+        tools:layout="@layout/fragment_refresh" >
         <action
-            android:id="@+id/action_loginFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
+            android:id="@+id/action_refreshFragment_to_listFragment"
+            app:destination="@id/listFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_profileFragment"
+            android:id="@+id/action_refreshFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/registrationFragment"
-        android:name="com.androidproject.RegistrationFragment"
-        android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" >
         <action
-            android:id="@+id/action_registrationFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_refreshFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
 </navigation>
