@@ -3,12 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListFragment">
+    tools:context=".androidproject.fragments.ListFragment"
+    android:background="@color/teal_700">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/restaurant_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="40dp"
+        android:clipToPadding="false"
+        android:padding="5dp"
+
+        tools:listitem="@layout/item_restaurant"
+>
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 </FrameLayout>

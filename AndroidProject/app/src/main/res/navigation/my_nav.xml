@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/refreshFragment">
+    app:startDestination="@id/listFragment">
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.androidproject.DetailFragment"
+        android:name="com.example.androidproject.fragments.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.androidproject.ProfileFragment"
+        android:name="com.example.androidproject.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile"
         app:startDestination="@id/action_profileFragment_to_listFragment">
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.androidproject.ListFragment"
+        android:name="com.example.androidproject.fragments.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
@@ -47,9 +47,9 @@
     </fragment>
     <fragment
         android:id="@+id/refreshFragment"
-        android:name="com.androidproject.RefreshFragment"
+        android:name="com.example.androidproject.fragments.RefreshProfileFragment"
         android:label="fragment_refresh"
-        tools:layout="@layout/fragment_refresh" >
+        tools:layout="@layout/fragment_refreshprofile" >
         <action
             android:id="@+id/action_refreshFragment_to_listFragment"
             app:destination="@id/listFragment" />
