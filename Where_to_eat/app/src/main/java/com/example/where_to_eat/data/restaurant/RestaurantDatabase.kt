@@ -30,5 +30,4 @@ abstract class RestaurantDatabase: RoomDatabase() {
             }
         }
     }
-
 }
