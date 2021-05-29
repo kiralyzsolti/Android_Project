@@ -21,7 +21,9 @@ import com.example.where_to_eat.retrofit.Repository
 
 class MainFragment : Fragment() {
 
-    private lateinit var viewModel: MainViewModel
+    companion object {
+        lateinit var viewModel: MainViewModel
+    }
     private val myAdapter by lazy { MyAdapter() }
     private lateinit var recyclerView: RecyclerView
 
@@ -40,10 +42,10 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerview()
 
-        val repository = Repository()
-        val viewModelFactory = MainViewModelFactory(repository)
-        viewModel = activity?.let { ViewModelProvider(it, viewModelFactory).get(MainViewModel::class.java) }!!
-        viewModel.getAll()
+//        val repository = Repository()
+//        val viewModelFactory = MainViewModelFactory(repository)
+//        viewModel = activity?.let { ViewModelProvider(it, viewModelFactory).get(MainViewModel::class.java) }!!
+//        viewModel.getAll()
         viewModel.myResponseA.observe(requireActivity(), Observer { response ->
             if(response.isSuccessful) {
                 response.body()?.let { myAdapter.setData(it) }

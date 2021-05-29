@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.profile.RegistrationFragment">
+    tools:context=".fragments.profile.RegistrationFragment"
+    android:background="@color/background">
 
     <ImageView
         android:id="@+id/r_image"
