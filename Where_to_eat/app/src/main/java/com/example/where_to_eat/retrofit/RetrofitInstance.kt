@@ -1,6 +1,5 @@
 package com.example.where_to_eat.retrofit
 
-import com.example.where_to_eat.retrofit.Constants.Companion.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

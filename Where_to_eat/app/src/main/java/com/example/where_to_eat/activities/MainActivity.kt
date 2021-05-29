@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     private var backPressedTime = 0L
-    private lateinit var viewModel: MainViewModel
+//    private lateinit var viewModel: MainViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,13 +33,13 @@ class MainActivity : AppCompatActivity() {
         // setupActionBarWithNavController(navController,appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)
 
-        val repository = Repository()
-        val viewModelFactory = MainViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
-        viewModel.getPost()
-        viewModel.myResponse.observe(this, Observer { response ->
-            response.body()?.let { Log.d("Response", it.name) }
-        })
+//        val repository = Repository()
+//        val viewModelFactory = MainViewModelFactory(repository)
+//        viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
+//        viewModel.getPost()
+//        viewModel.myResponse.observe(this, Observer { response ->
+//            response.body()?.let { Log.d("Response", it.name) }
+//        })
 
 
 
