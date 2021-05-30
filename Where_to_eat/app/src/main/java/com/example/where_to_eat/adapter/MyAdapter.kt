@@ -40,6 +40,7 @@ class MyAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
         holder.itemView.findViewById<ImageButton>(R.id.i_favouriteButton).setOnClickListener {
             mRestaurantViewModel.setRestAsFavourite(myList[position].id)
+            notifyDataSetChanged()
         }
 
         holder.itemView.setOnClickListener(object :View.OnClickListener{

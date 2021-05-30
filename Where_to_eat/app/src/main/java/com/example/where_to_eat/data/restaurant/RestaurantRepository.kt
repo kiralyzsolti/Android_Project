@@ -3,7 +3,7 @@ package com.example.where_to_eat.data.restaurant
 import androidx.lifecycle.LiveData
 
 class RestaurantRepository(private val restaurantDao: RestaurantDao) {
-    val readAllData: LiveData<List<Restaurant>> = restaurantDao.readAllData()
+    val readAllFavouriteData: LiveData<List<Restaurant>> = restaurantDao.readAllFavouriteData()
 
     fun setRestAsFavourite(id: Int){
         restaurantDao.setRestAsFavourite(id)

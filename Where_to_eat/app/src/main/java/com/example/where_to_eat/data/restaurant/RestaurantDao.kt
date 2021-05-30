@@ -8,8 +8,8 @@ interface RestaurantDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addRestaurant(restaurant: Restaurant)
 
-    @Query("SELECT * FROM restaurants")
-    fun readAllData(): LiveData<List<Restaurant>>
+    @Query("SELECT * FROM restaurants WHERE favourite==1")
+    fun readAllFavouriteData(): LiveData<List<Restaurant>>
 
     @Query("SELECT COUNT(*) FROM restaurants WHERE id=:id")
     fun checkRestId(id: Int): LiveData<Int>

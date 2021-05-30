@@ -15,8 +15,21 @@ import com.example.where_to_eat.data.user.UserViewModel
 import android.graphics.BitmapFactory
 import android.util.Log
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.where_to_eat.adapter.MyAdapter
+import com.example.where_to_eat.data.restaurant.RestaurantViewModel
+import com.example.where_to_eat.retrofit.DataModel
+import com.example.where_to_eat.retrofit.MainViewModel
 
-class ProfileFragment : Fragment() {
+class ProfileFragment : Fragment(), MyAdapter.OnItemClickListener {
+
+    companion object {
+        lateinit var viewModel: MainViewModel
+    }
+    private val myAdapter by lazy { MyAdapter() }
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var mRestaurantViewModel: RestaurantViewModel
 
     private lateinit var mUserViewModel: UserViewModel
     private lateinit var name: TextView
@@ -59,5 +72,32 @@ class ProfileFragment : Fragment() {
         }
 
         return view;
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupRecyclerview()
+        mRestaurantViewModel = ViewModelProvider(this).get(RestaurantViewModel::class.java)
+        mRestaurantViewModel.readAllFavouriteData.observe(viewLifecycleOwner, Observer{
+            if(it != null){
+                val myList = emptyList<DataModel>().toMutableList()
+                for(item in it){
+                    myList += DataModel(item.id,item.address,item.area,item.city,item.country,item.image_url,
+                                                         item.lat, item.lng,item.mobile_reserve_url,item.name,item.phone,
+                                                         item.postal_code,item.price,item.reserve_url,item.state)
+                }
+                myAdapter.setData(myList,this)
+            }
+        })
+
+    }
+
+
+    private fun setupRecyclerview(){
+        recyclerView = view?.findViewById(R.id.p_recyclerView)!!
+        recyclerView.adapter = myAdapter
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+    }
+    override fun onItemClick(position: Int) {
+        findNavController().navigate(R.id.action_profileFragment_to_detailFragment)
     }
 }

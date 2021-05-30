@@ -9,13 +9,13 @@ import kotlinx.coroutines.launch
 
 class RestaurantViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Restaurant>>
+    val readAllFavouriteData: LiveData<List<Restaurant>>
     private val repository: RestaurantRepository
 
     init{
         val restaurantDao = RestaurantDatabase.getDatabase(application).restaurantDao()
         repository = RestaurantRepository(restaurantDao)
-        readAllData = repository.readAllData
+        readAllFavouriteData = repository.readAllFavouriteData
     }
 
     fun addRestaurant(restaurant: Restaurant){

@@ -120,6 +120,7 @@ class RegistrationFragment : Fragment() {
         val image = view?.findViewById<ImageView>(R.id.r_image)
         if(resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
             image?.setImageURI(data?.data)
+            image?.visibility = View.VISIBLE
         }
     }
 
