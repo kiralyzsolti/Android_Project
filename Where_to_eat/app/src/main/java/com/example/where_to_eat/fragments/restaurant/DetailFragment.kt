@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.where_to_eat.R
 import com.example.where_to_eat.data.restaurant.Restaurant
 import com.example.where_to_eat.data.restaurant.RestaurantViewModel
+import com.example.where_to_eat.fragments.profile.ProfileFragment
 import com.example.where_to_eat.retrofit.DataModel
 import com.example.where_to_eat.retrofit.MainViewModel
 import com.example.where_to_eat.retrofit.MainViewModelFactory

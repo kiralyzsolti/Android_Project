@@ -14,6 +14,7 @@ import com.example.where_to_eat.R
 import com.example.where_to_eat.data.restaurant.Restaurant
 import com.example.where_to_eat.data.restaurant.RestaurantViewModel
 import com.example.where_to_eat.data.user.UserViewModel
+import com.example.where_to_eat.fragments.profile.ProfileFragment
 import com.example.where_to_eat.fragments.restaurant.MainFragment
 import com.example.where_to_eat.retrofit.DataModel
 import com.example.where_to_eat.retrofit.MainViewModel

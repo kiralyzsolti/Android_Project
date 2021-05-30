@@ -24,9 +24,6 @@ import com.example.where_to_eat.retrofit.MainViewModel
 
 class ProfileFragment : Fragment(), MyAdapter.OnItemClickListener {
 
-    companion object {
-        lateinit var viewModel: MainViewModel
-    }
     private val myAdapter by lazy { MyAdapter() }
     private lateinit var recyclerView: RecyclerView
     private lateinit var mRestaurantViewModel: RestaurantViewModel
@@ -81,16 +78,15 @@ class ProfileFragment : Fragment(), MyAdapter.OnItemClickListener {
             if(it != null){
                 val myList = emptyList<DataModel>().toMutableList()
                 for(item in it){
-                    myList += DataModel(item.id,item.address,item.area,item.city,item.country,item.image_url,
+                    myList.add(DataModel(item.id,item.address,item.area,item.city,item.country,item.image_url,
                                                          item.lat, item.lng,item.mobile_reserve_url,item.name,item.phone,
-                                                         item.postal_code,item.price,item.reserve_url,item.state)
+                                                         item.postal_code,item.price,item.reserve_url,item.state))
                 }
                 myAdapter.setData(myList,this)
             }
         })
 
     }
-
 
     private fun setupRecyclerview(){
         recyclerView = view?.findViewById(R.id.p_recyclerView)!!

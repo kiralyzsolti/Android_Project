@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.where_to_eat.R
 import com.example.where_to_eat.data.restaurant.RestaurantViewModel
+import com.example.where_to_eat.fragments.profile.ProfileFragment
 import com.example.where_to_eat.fragments.restaurant.DetailFragment
 import com.example.where_to_eat.retrofit.DataModel
 import com.squareup.picasso.Picasso
