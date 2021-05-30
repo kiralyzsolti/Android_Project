@@ -12,6 +12,9 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addUser(user: User)
 
-    @Query("SELECT * FROM users LIMIT 1")
+    @Query("SELECT * FROM users WHERE id=1")
     fun readData(): LiveData<User>
+
+    @Query("UPDATE users SET name=:name, image=:image, address=:address, phone_num=:phone, email=:email WHERE id==1")
+    fun updateData(name: String, image:ByteArray, address: String, phone: String, email: String)
 }

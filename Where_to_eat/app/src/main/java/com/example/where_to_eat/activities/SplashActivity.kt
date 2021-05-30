@@ -15,6 +15,7 @@ import com.example.where_to_eat.retrofit.MainViewModel
 import com.example.where_to_eat.retrofit.MainViewModelFactory
 import com.example.where_to_eat.retrofit.Repository
 
+@Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MainViewModel

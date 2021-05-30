@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/p_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,12 +21,10 @@
         android:id="@+id/p_nameV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:text="Name:"
-        app:layout_constraintEnd_toStartOf="@+id/p_name"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_image" />
 
@@ -35,22 +33,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="208dp"
-        android:layout_marginRight="208dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/p_nameV"
         app:layout_constraintTop_toBottomOf="@+id/p_image" />
 
     <TextView
         android:id="@+id/p_addressV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:text="Address:"
-        app:layout_constraintEnd_toStartOf="@+id/p_address"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_nameV" />
 
@@ -59,22 +56,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="204dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginRight="204dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toEndOf="@+id/p_addressV"
         app:layout_constraintTop_toBottomOf="@+id/p_name" />
 
     <TextView
         android:id="@+id/p_phoneV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:text="Phone:"
-        app:layout_constraintEnd_toStartOf="@+id/p_phone"
-        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_addressV" />
 
@@ -83,22 +80,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="204dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginRight="204dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/p_phoneV"
         app:layout_constraintTop_toBottomOf="@+id/p_address" />
 
     <TextView
         android:id="@+id/p_emailV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:text="Email:"
-        app:layout_constraintEnd_toStartOf="@+id/p_email"
-        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_phoneV" />
 
@@ -107,10 +104,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="204dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginRight="204dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/p_emailV"
         app:layout_constraintTop_toBottomOf="@+id/p_phone" />
 
     <Button
@@ -119,6 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Update"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"

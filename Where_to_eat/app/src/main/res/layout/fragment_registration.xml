@@ -9,24 +9,23 @@
 
     <ImageView
         android:id="@+id/r_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/r_title"
+        tools:src="@tools:sample/avatars"/>
 
     <TextView
         android:id="@+id/r_nameV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:text="Name:"
-        app:layout_constraintEnd_toStartOf="@+id/r_name"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/r_image" />
 
@@ -35,23 +34,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginRight="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="          Name               "
         android:textSize="13sp"
-        android:hint="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r_image" />
+        app:layout_constraintStart_toEndOf="@+id/r_nameV"
+        app:layout_constraintTop_toBottomOf="@+id/r_image"
+        android:inputType="text"/>
 
     <TextView
         android:id="@+id/r_addressV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:text="Address:"
-        app:layout_constraintEnd_toStartOf="@+id/r_address"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/r_nameV" />
 
@@ -60,23 +59,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginRight="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="         Adress              "
         android:textSize="13sp"
-        android:hint="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r_name" />
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toEndOf="@+id/r_addressV"
+        app:layout_constraintTop_toBottomOf="@+id/r_name"
+        android:inputType="text"/>
 
     <TextView
         android:id="@+id/r_phoneV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:text="Phone:"
-        app:layout_constraintEnd_toStartOf="@+id/r_phone"
-        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/r_addressV" />
 
@@ -85,23 +85,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginRight="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="            Phone            "
         android:textSize="13sp"
-        android:hint="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r_address" />
+        app:layout_constraintStart_toEndOf="@+id/r_phoneV"
+        app:layout_constraintTop_toBottomOf="@+id/r_address"
+        android:inputType="number"/>
 
     <TextView
         android:id="@+id/r_emailV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:text="Email:"
-        app:layout_constraintEnd_toStartOf="@+id/r_email"
-        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/r_phoneV" />
 
@@ -110,19 +110,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginRight="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="            Email            "
         android:textSize="13sp"
-        android:hint="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r_phone" />
+        app:layout_constraintStart_toEndOf="@+id/r_emailV"
+        app:layout_constraintTop_toBottomOf="@+id/r_phone"
+        android:inputType="textEmailAddress" />
 
     <Button
-        android:id="@+id/r_changeImage"
-        android:layout_width="268dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="20dp"
-        android:text="Change Image"
+        android:id="@+id/r_selectImage"
+        android:layout_width="270dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:text="Select Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,10 +136,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Registration"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r_changeImage" />
+        app:layout_constraintTop_toBottomOf="@+id/r_selectImage" />
+
+    <TextView
+        android:id="@+id/r_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="40sp"
+        android:text="Registration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

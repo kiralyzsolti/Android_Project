@@ -8,7 +8,7 @@ data class User (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     var name: String ="",
-    var image: String = "",
+    var image: ByteArray? = null,
     var address: String = "",
     var phone_num: String = "",
     var email: String = ""
