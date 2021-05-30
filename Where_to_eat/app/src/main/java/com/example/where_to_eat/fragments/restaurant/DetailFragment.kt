@@ -1,4 +1,4 @@
-package com.example.where_to_eat.fragments
+package com.example.where_to_eat.fragments.restaurant
 
 import android.os.Bundle
 import android.util.Log

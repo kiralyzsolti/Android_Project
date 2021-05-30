@@ -5,6 +5,9 @@ import androidx.lifecycle.LiveData
 class RestaurantRepository(private val restaurantDao: RestaurantDao) {
     val readAllData: LiveData<List<Restaurant>> = restaurantDao.readAllData()
 
+    fun checkRestId(id: Int): LiveData<Int>{
+        return restaurantDao.checkRestId(id)
+    }
     suspend fun addRestaurant(restaurant: Restaurant){
         restaurantDao.addRestaurant(restaurant)
     }

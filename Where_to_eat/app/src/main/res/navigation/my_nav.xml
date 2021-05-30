@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.where_to_eat.fragments.MainFragment"
+        android:name="com.example.where_to_eat.fragments.restaurant.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.where_to_eat.fragments.DetailFragment"
+        android:name="com.example.where_to_eat.fragments.restaurant.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
     <fragment

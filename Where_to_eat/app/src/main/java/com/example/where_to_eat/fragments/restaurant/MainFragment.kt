@@ -1,22 +1,17 @@
-package com.example.where_to_eat.fragments
+package com.example.where_to_eat.fragments.restaurant
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.where_to_eat.R
 import com.example.where_to_eat.retrofit.MainViewModel
-import com.example.where_to_eat.retrofit.MainViewModelFactory
 import com.example.where_to_eat.retrofit.MyAdapter
-import com.example.where_to_eat.retrofit.Repository
 
 
 class MainFragment : Fragment() {
@@ -61,6 +56,5 @@ class MainFragment : Fragment() {
         recyclerView = view?.findViewById(R.id.recycler_view)!!
         recyclerView.adapter = myAdapter
         recyclerView.layoutManager = LinearLayoutManager(activity)
-
     }
 }
