@@ -16,4 +16,7 @@ interface RestaurantDao {
 
     @Query("SELECT COUNT(*) FROM restaurants WHERE id=:id")
     fun checkRestId(id: Int): LiveData<Int>
+
+    @Query("SELECT * FROM restaurants WHERE id=:id")
+    fun selectRest(id: Int): LiveData<Restaurant>
 }

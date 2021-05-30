@@ -27,4 +27,8 @@ class RestaurantViewModel(application: Application): AndroidViewModel(applicatio
     fun checkRestId(id: Int): LiveData<Int>{
         return repository.checkRestId(id)
     }
+
+    fun selectRest(id: Int): LiveData<Restaurant>{
+        return repository.selectRest(id)
+    }
 }
