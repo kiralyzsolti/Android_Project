@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.where_to_eat.R
 import com.example.where_to_eat.adapter.MyAdapter
+import com.example.where_to_eat.data.restaurant.RestaurantViewModel
 import com.example.where_to_eat.retrofit.MainViewModel
 
 
@@ -27,10 +30,7 @@ class MainFragment : Fragment(), MyAdapter.OnItemClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_main, container, false)
-
-
-        return view
+        return inflater.inflate(R.layout.fragment_main, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -41,6 +41,8 @@ class MainFragment : Fragment(), MyAdapter.OnItemClickListener {
 //        val viewModelFactory = MainViewModelFactory(repository)
 //        viewModel = activity?.let { ViewModelProvider(it, viewModelFactory).get(MainViewModel::class.java) }!!
 //        viewModel.getAll()
+
+        MyAdapter.mRestaurantViewModel = ViewModelProvider(this).get(RestaurantViewModel::class.java)
         viewModel.myResponseA.observe(requireActivity(), { response ->
             if(response.isSuccessful) {
                 response.body()?.let { myAdapter.setData(it,this) }

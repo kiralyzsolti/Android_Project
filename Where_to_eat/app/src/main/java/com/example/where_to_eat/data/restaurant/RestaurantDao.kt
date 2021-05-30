@@ -1,10 +1,7 @@
 package com.example.where_to_eat.data.restaurant
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface RestaurantDao {
@@ -19,4 +16,7 @@ interface RestaurantDao {
 
     @Query("SELECT * FROM restaurants WHERE id=:id")
     fun selectRest(id: Int): LiveData<Restaurant>
+
+    @Query("UPDATE restaurants SET favourite=1 WHERE id=:id")
+    fun setRestAsFavourite(id: Int)
 }

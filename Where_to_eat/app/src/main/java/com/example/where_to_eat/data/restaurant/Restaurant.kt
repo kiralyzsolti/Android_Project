@@ -21,5 +21,5 @@ data class Restaurant (
     val price: Double,
     val reserve_url: String,
     val state: String,
-    var favourite: Boolean = false
+    var favourite: Int = 0
 )

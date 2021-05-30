@@ -31,4 +31,10 @@ class RestaurantViewModel(application: Application): AndroidViewModel(applicatio
     fun selectRest(id: Int): LiveData<Restaurant>{
         return repository.selectRest(id)
     }
+
+    fun setRestAsFavourite(id: Int){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.setRestAsFavourite(id)
+        }
+    }
 }

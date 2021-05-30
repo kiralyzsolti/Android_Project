@@ -61,7 +61,7 @@ class SplashActivity : AppCompatActivity() {
                             mRestaurantViewModel.addRestaurant(Restaurant(item.id,
                                 item.address,item.area,item.city,item.country,item.image_url,
                                 item.lat,item.lng,item.mobile_reserve_url,item.name,item.phone,
-                                item.postal_code,item.price,item.reserve_url,item.state,false))
+                                item.postal_code,item.price,item.reserve_url,item.state))
                         }
                     })
         })
