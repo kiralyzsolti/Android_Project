@@ -25,23 +25,13 @@ class MainFragment : Fragment(), MyAdapter.OnItemClickListener {
     }
     private val myAdapter by lazy { MyAdapter() }
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mUserViewModel: UserViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_main, container, false)
-
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        mUserViewModel.readData.observe(viewLifecycleOwner,{
-            if(it == null){
-                findNavController().navigate(R.id.action_mainFragment_to_registrationFragment)
-            }
-        })
-
-        return view
+        return inflater.inflate(R.layout.fragment_main, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
